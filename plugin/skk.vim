@@ -1905,8 +1905,10 @@ endfunction
 
 function! s:SkkOn()
   let b:skk_on = 1
-  let &rulerformat = "%31(%-14{SkkGetModeStr()}%l,%c%V%=%P%)"
-  let &ruler = 1
+  if g:skk_override_ruler
+    let &rulerformat = "%31(%-14{SkkGetModeStr()}%l,%c%V%=%P%)"
+    let &ruler = 1
+  endif
 endfunction
 
 function! SkkEnable()
