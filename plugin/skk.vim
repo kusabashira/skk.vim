@@ -83,6 +83,10 @@ if !exists("skk_initial_mode")
   let skk_initial_mode = 'hira'
 endif
 
+if !exists("skk_override_ruler")
+  let skk_override_ruler = 1
+endif
+
 if !exists("skk_marker_white")
   let skk_marker_white = '▽'
 endif
