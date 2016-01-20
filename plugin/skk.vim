@@ -83,6 +83,10 @@ if !exists("skk_initial_mode")
   let skk_initial_mode = 'hira'
 endif
 
+if !exists("skk_override_ruler")
+  let skk_override_ruler = 1
+endif
+
 if !exists("skk_marker_white")
   let skk_marker_white = '▽'
 endif
@@ -1901,8 +1905,10 @@ endfunction
 
 function! s:SkkOn()
   let b:skk_on = 1
-  let &rulerformat = "%31(%-14{SkkGetModeStr()}%l,%c%V%=%P%)"
-  let &ruler = 1
+  if g:skk_override_ruler
+    let &rulerformat = "%31(%-14{SkkGetModeStr()}%l,%c%V%=%P%)"
+    let &ruler = 1
+  endif
 endfunction
 
 function! SkkEnable()

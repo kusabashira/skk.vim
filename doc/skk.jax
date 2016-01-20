@@ -135,6 +135,10 @@ g:skk_initial_mode						*g:skk_initial_mode*
 										(初期値: "hira")
 		skk をオンにしたときの初期モード
 
+g:skk_override_ruler					*g:skk_override_ruler*
+										(初期値: 1)
+		skk をオンにしている間、skk.vimのルーラーを使うか？
+
 g:skk_marker_white						*g:skk_marker_white*
 										(初期値: "▽")
 		▽モードのマーク
